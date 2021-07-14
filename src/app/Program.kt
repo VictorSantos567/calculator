@@ -1,16 +1,19 @@
 package app
 
+fun calculadora(numero1:Float,numero2:Float, operacao:Int){
+	val resultado:Float? 
+			
+	when(operacao){
+		1 -> resultado = (numero1+numero2)
+		2 -> resultado = (numero1-numero2)
+		3 -> resultado = (numero1*numero2)
+		4 -> resultado = (numero1/numero2)
+	}
+}
 
-const val MIN_AGE = 16
-const val MAX_AGE = 68
 
 fun main(args: Array<String>) {
 	
-	var age = (10..100).random()
 	
-	println(age)
-	
-	println(age in MIN_AGE..MAX_AGE)
-	println(age >= MIN_AGE && age <= MAX_AGE )
 	
 }

@@ -1,2 +1,2 @@
 # calculator
-Exercicio final Curso introdução a linguagem kotlin
+Exercicio final do curso de introdução a linguagem kotlin na Digital Innovation One Bootcamp Inter

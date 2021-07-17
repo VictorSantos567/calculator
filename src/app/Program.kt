@@ -1,19 +1,35 @@
 package app
 
-fun calculadora(numero1:Float,numero2:Float, operacao:Int){
-	val resultado:Float? 
-			
-	when(operacao){
-		1 -> resultado = (numero1+numero2)
-		2 -> resultado = (numero1-numero2)
-		3 -> resultado = (numero1*numero2)
-		4 -> resultado = (numero1/numero2)
+fun calculadora(numero1: Float?, numero2: Float?, operacao: Int) {
+
+	if (numero1 == null || numero2 == null) {
+		println("Um dos valores é nulo, Solicito informa valores válidos ")
+	} else {
+		when (operacao) {
+			1 -> {
+				println("A adicao de $numero1 + $numero2 eh " + (numero1 + numero2))
+			}
+			2 -> {
+				println("A subtracao de $numero1 - $numero2 eh: " + (numero1 - numero2))
+			}
+			3 -> {
+				println("A multiplicacao de $numero1 + $numero2 eh " + numero1 * numero2)
+			}
+			4 -> {
+				println("A divisao de $numero1 + $numero2 eh " + numero1 / numero2)
+			}
+			else -> println("Operação invalidade, Informe um valor entre 0 e 4")
+		}
 	}
 }
 
 
-fun main(args: Array<String>) {
-	
-	
-	
+fun main() {
+
+	calculadora(2.0f, null, 1)
+	calculadora(2.0f, 2.5f, 2)
+	calculadora(2.0f, 2.5f, 3)
+	calculadora(2.0f, 2.5f, 4)
+
+
 }

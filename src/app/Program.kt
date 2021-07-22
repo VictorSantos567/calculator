@@ -13,12 +13,15 @@ fun calculadora(numero1: Float?, numero2: Float?, operacao: Int) {
 				println("A subtracao de $numero1 - $numero2 eh: " + (numero1 - numero2))
 			}
 			3 -> {
-				println("A multiplicacao de $numero1 + $numero2 eh " + numero1 * numero2)
+				println("A multiplicacao de $numero1 * $numero2 eh: " + (numero1 * numero2))
 			}
 			4 -> {
-				println("A divisao de $numero1 + $numero2 eh " + numero1 / numero2)
+				println("A divisao de $numero1 / $numero2 eh: " + (numero1 / numero2))
 			}
-			else -> println("Operação invalidade, Informe um valor entre 0 e 4")
+			5 -> {
+				println("A resultado da potencia $numero1 ^ $numero2 e: " + (Math.pow(numero1.toDouble(),numero2.toDouble())))
+			}
+			else -> println("Operação invalidade, Informe um valor entre 0 e 5")
 		}
 	}
 }
@@ -30,6 +33,7 @@ fun main() {
 	calculadora(2.0f, 2.5f, 2)
 	calculadora(2.0f, 2.5f, 3)
 	calculadora(2.0f, 2.5f, 4)
+	calculadora(2.0f, 2.5f, 5)
 
 
 }
